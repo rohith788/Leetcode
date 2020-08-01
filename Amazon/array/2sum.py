@@ -1,10 +1,10 @@
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        record = {}
+    def twoSum(self, nums: List[int], k: int) -> List[int]:
+        d = {}
         for i in range(len(nums)):
-          diff = target - nums[i]
-          if diff in record:
-            return [record[diff], i]
-          else:
-            record.update({nums[i] : i})
+            if((k - nums [i]) in d):
+                return [d[k - nums[i]], i]
+            else:
+                d[nums[i]] = i 
         return []
+                
